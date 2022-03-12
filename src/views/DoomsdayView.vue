@@ -25,7 +25,10 @@ const correctAnswer = computed(() => {
   return date.getDay();
 });
 
+const minYear = 1700;
+const maxYear = 2100;
 const generateNewQuestion = () => {
-  yearToGuess.value = Math.floor(Math.random() * 100) + 2000;
+  yearToGuess.value =
+    Math.floor(Math.random() * (maxYear - minYear + 1)) + minYear;
 };
 </script>
