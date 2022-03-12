@@ -25,8 +25,8 @@ const submit = (answer: number) => {
   padding: 1px;
 }
 .answer-options > button {
-  color: var(--color-text-i);
-  background: var(--color-background-i);
+  color: var(--color-text-contrast);
+  background: var(--color-background-contrast);
   border: 0;
   height: 5rem;
   font-weight: 500;

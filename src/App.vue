@@ -46,5 +46,11 @@ nav > * {
   display: grid;
   align-items: center;
   justify-items: center;
+  text-decoration: none;
+}
+nav > [aria-current="page"] {
+  text-decoration: underline;
+  font-weight: bold;
+  border-width: 2px;
 }
 </style>

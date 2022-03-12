@@ -1,17 +1,18 @@
 :root {
   color-scheme: dark light;
-  --color-text: #eef;
+  --color-text: #eee;
   --color-background: #333;
-  --color-background-i: #eef;
-  --color-text-i: #333;
+  --color-text-accent: #1e9ced;
+  --color-text-contrast: #eee;
+  --color-background-contrast: #222;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --color-text: #333;
-    --color-background: #eef;
-    --color-background-i: #333;
-    --color-text-i: #eef;
+    --color-background: #eee;
+    --color-text-contrast: #111;
+    --color-background-contrast: #ccc;
   }
 }
 
@@ -36,6 +37,10 @@ body, #app {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--color-text-accent);
 }
 
 .dynamic-question-content {
