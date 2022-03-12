@@ -15,7 +15,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits } from "vue";
 import InputDay from "./InputDay.vue";
 
 const props = defineProps({
