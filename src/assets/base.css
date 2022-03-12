@@ -1,8 +1,16 @@
 :root {
+  color-scheme: dark light;
+  --color-text: #eef;
+  --color-background: #333;
+  --color-background-i: #eef;
+  --color-text-i: #333;
+}
+
+@media (prefers-color-scheme: light) {
   --color-text: #333;
   --color-background: #eef;
   --color-background-i: #333;
-  --color-text-i: #eee;
+  --color-text-i: #eef;
 }
 
 *,
