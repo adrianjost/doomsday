@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div class="question-page">
     <header>
       <h2>
         <slot name="title" />
@@ -11,7 +11,7 @@
       </p>
       <InputDay @submit="submit" />
     </form>
-  </main>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -33,8 +33,7 @@ const submit = (answer: number) => {
 </script>
 
 <style scoped>
-main {
-  min-height: 100vh;
+.question-page {
   display: grid;
   align-content: space-between;
   max-width: 600px;
