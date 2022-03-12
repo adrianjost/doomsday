@@ -9,7 +9,7 @@
       <p class="question">
         <slot name="question" />
       </p>
-      <InputDay @submit="submit" />
+      <InputDay @submit="submit" @skip="skip" />
     </form>
   </div>
 </template>
@@ -20,15 +20,18 @@ import InputDay from "./InputDay.vue";
 const props = defineProps({
   answer: Number,
 });
-const emit = defineEmits(["done"]);
+const emit = defineEmits(["next"]);
 
 const submit = (answer: number) => {
   if (answer === props.answer) {
     alert("✅ Correct! 🎉");
-    emit("done", answer);
+    emit("next");
   } else {
     alert("👀 Guess again! 😉");
   }
+};
+const skip = () => {
+  emit("next");
 };
 </script>
 

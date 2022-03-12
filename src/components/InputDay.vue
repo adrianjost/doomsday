@@ -7,13 +7,17 @@
     <button type="button" @click="submit(4)">4 - Thu</button>
     <button type="button" @click="submit(5)">5 - Fri</button>
     <button type="button" @click="submit(6)">6 - Sat</button>
+    <button type="button" @click="skip">Skip</button>
   </div>
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits(["submit"]);
+const emit = defineEmits(["submit", "skip"]);
 const submit = (answer: number) => {
   emit("submit", answer);
+};
+const skip = () => {
+  emit("skip");
 };
 </script>
 
@@ -33,6 +37,6 @@ const submit = (answer: number) => {
   font-size: 1.5rem;
 }
 .answer-options > button:last-of-type {
-  grid-column: 1 / 4;
+  grid-column: 2 / 4;
 }
 </style>

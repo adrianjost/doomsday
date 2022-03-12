@@ -1,5 +1,5 @@
 <template>
-  <QuestionPage :answer="correctAnswer" @done="generateNewQuestion">
+  <QuestionPage :answer="correctAnswer" @next="generateNewQuestion">
     <template #title>
       Guess the Doomsday<br />
       for a given year.
