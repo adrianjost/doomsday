@@ -7,10 +7,12 @@
 }
 
 @media (prefers-color-scheme: light) {
-  --color-text: #333;
-  --color-background: #eef;
-  --color-background-i: #333;
-  --color-text-i: #eef;
+  :root {
+    --color-text: #333;
+    --color-background: #eef;
+    --color-background-i: #333;
+    --color-text-i: #eef;
+  }
 }
 
 *,
