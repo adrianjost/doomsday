@@ -3,7 +3,7 @@
     <div class="row text-left">
       <div class="collapsible">
         <input id="collapsible1" type="radio" name="help-article" />
-        <label for="collapsible1">Convert Weekdays to Numbers</label>
+        <label for="collapsible1">Convert weekdays to numbers</label>
         <div class="collapsible-body">
           <p>
             Converting Weekdays to numbers makes all the calculations way
@@ -59,7 +59,7 @@
       </div>
       <div class="collapsible">
         <input id="collapsible2" type="radio" name="help-article" />
-        <label for="collapsible2"> <h2>What are common Doomsdays?</h2></label>
+        <label for="collapsible2"> <h2>What are common doomsdays?</h2></label>
         <div class="collapsible-body">
           <ul class="text-left">
             <li>day / month</li>
@@ -80,7 +80,7 @@
       </div>
       <div class="collapsible">
         <input id="collapsible3" type="radio" name="help-article" />
-        <label for="collapsible3">Doomsdays of Centuries</label>
+        <label for="collapsible3">Doomsdays of centuries</label>
         <div class="collapsible-body">
           <table>
             <thead>
@@ -189,7 +189,7 @@
       </div>
       <div class="collapsible">
         <input id="collapsible5" type="radio" name="help-article" />
-        <label for="collapsible5">Calculate Doomsday of year</label>
+        <label for="collapsible5">Calculate doomsday of year</label>
         <div class="collapsible-body">
           <ol>
             <li>Remember Doomsday of a year near by (preferably just under)</li>
@@ -197,6 +197,44 @@
             <li>Add the number of leap years (years / 4 rounded down)</li>
             <li>you have your doomsday for any year 🎉</li>
           </ol>
+        </div>
+      </div>
+      <div class="collapsible">
+        <input id="collapsible6" type="radio" name="help-article" />
+        <label for="collapsible6">Why? About this Project</label>
+        <div class="collapsible-body">
+          <p>
+            I think it's a cool skill to calculate the weekday of any date. I
+            got inspired by
+            <a
+              href="https://youtu.be/eSpW4I5moiA"
+              target="_blank"
+              rel="noreferrer"
+              >a video by Mike Boyd</a
+            >
+            and
+            <a
+              href="https://youtu.be/z2x3SSBVGJU"
+              target="_blank"
+              rel="noreferrer"
+              >Numberphile</a
+            >. I highly recommend watching those videos. 🎬
+          </p>
+          <p>
+            In order to learn the skill myself I created this little training
+            app.
+            <a
+              href="https://github.com/adrianjost/doomsday"
+              target="_blank"
+              rel="noreferrer"
+              >Check it out on GitHub</a
+            >
+            and make it even better if you want 💖.
+          </p>
+          <p>
+            Created with ❤️ by
+            <a href="https://adrianjost.dev" target="_blank">Adrian Jost</a>.
+          </p>
         </div>
       </div>
     </div>
@@ -215,5 +253,9 @@ h2 {
 
 table {
   margin: 0.5rem 0;
+}
+
+.collapsible-body a {
+  margin: 0;
 }
 </style>
