@@ -40,17 +40,19 @@ const skip = () => {
   display: grid;
   align-content: space-between;
   max-width: 600px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
 h2 {
-  margin: 2rem 0;
+  margin: 0.5rem 0.5rem 2rem;
+  font-size: 1.5rem;
 }
 
 .question {
   font-size: 2rem;
-  margin-bottom: 2rem;
-  padding: 0 2rem;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
 }
 </style>

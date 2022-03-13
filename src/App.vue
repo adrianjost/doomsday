@@ -3,7 +3,14 @@ import { RouterView, RouterLink } from "vue-router";
 
 import { watchEffect } from "vue";
 import { useRegisterSW } from "virtual:pwa-register/vue";
+import { useMediaQuery } from "@vueuse/core";
 
+const prefersDarkTheme = useMediaQuery("(prefers-color-scheme: dark)");
+watchEffect(() => {
+  document
+    .querySelector("html")
+    ?.classList.toggle("dark", prefersDarkTheme.value);
+});
 const { needRefresh, updateServiceWorker } = useRegisterSW();
 watchEffect(() => {
   if (needRefresh.value) {
@@ -16,9 +23,11 @@ watchEffect(() => {
 
 <template>
   <main>
-    <nav>
-      <RouterLink to="/">Test</RouterLink>
-      <RouterLink to="/doomsday">Training</RouterLink>
+    <nav class="border">
+      <ul class="nav-items inline">
+        <li><RouterLink to="/">Test</RouterLink></li>
+        <li><RouterLink to="/doomsday">Training</RouterLink></li>
+      </ul>
     </nav>
     <RouterView />
   </main>
@@ -35,22 +44,20 @@ main {
   grid-template-rows: 4rem auto;
 }
 nav {
+  margin: 0.5rem;
+  width: auto;
+}
+nav > ul.nav-items {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 0.5rem;
-  padding: 0.5rem;
+  margin-top: 0;
 }
-nav > * {
-  border: 1px solid currentColor;
-  border-radius: 0.5rem;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  text-decoration: none;
+nav > ul.nav-items > li {
+  margin: 0.25rem 0 0 0 !important;
 }
-nav > [aria-current="page"] {
-  text-decoration: underline;
-  font-weight: bold;
-  border-width: 2px;
+nav > ul.nav-items > li > a:not([aria-current="page"]) {
+  border-bottom: 0;
 }
 </style>

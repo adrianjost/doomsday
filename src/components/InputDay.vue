@@ -25,16 +25,15 @@ const skip = () => {
 .answer-options {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1px;
-  padding: 1px;
+  grid-gap: 0.25rem;
+  padding: 0.25rem;
 }
 .answer-options > button {
-  color: var(--color-text-contrast);
-  background: var(--color-background-contrast);
-  border: 0;
   height: 5rem;
   font-weight: 500;
   font-size: 1.5rem;
+  margin: 0;
+  padding: 0.5rem 0.25rem;
 }
 .answer-options > button:last-of-type {
   grid-column: 2 / 4;
