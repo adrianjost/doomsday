@@ -156,35 +156,37 @@
               </tr>
             </tbody>
           </table>
-          <table>
-            <thead></thead>
-            <tbody>
-              <tr>
-                <th scope="row">Year</th>
-                <th>xxx0</th>
-                <th>xx12</th>
-                <th>xx24</th>
-                <th>xx36</th>
-                <th>xx48</th>
-                <th>xx60</th>
-                <th>xx72</th>
-                <th>xx84</th>
-                <th>xx96</th>
-              </tr>
-              <tr>
-                <th scope="row">Offset</th>
-                <td>0</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-wrapper">
+            <table>
+              <thead></thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Year</th>
+                  <th>xxx0</th>
+                  <th>xx12</th>
+                  <th>xx24</th>
+                  <th>xx36</th>
+                  <th>xx48</th>
+                  <th>xx60</th>
+                  <th>xx72</th>
+                  <th>xx84</th>
+                  <th>xx96</th>
+                </tr>
+                <tr>
+                  <th scope="row">Offset</th>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <div class="collapsible">
@@ -251,8 +253,17 @@ h2 {
   width: 100%;
 }
 
+.table-wrapper {
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
 table {
   margin: 0.5rem 0;
+}
+
+table th {
+  padding: 0 0.25rem;
 }
 
 .collapsible-body a {
