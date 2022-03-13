@@ -46,6 +46,7 @@ main {
 nav {
   margin: 0.5rem;
   width: auto;
+  z-index: inherit;
 }
 nav > ul.nav-items {
   width: 100%;
