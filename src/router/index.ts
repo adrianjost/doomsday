@@ -10,9 +10,14 @@ const router = createRouter({
       component: DayView,
     },
     {
-      path: "/doomsday",
-      name: "doomsday",
-      component: () => import("../views/DoomsdayView.vue"),
+      path: "/train-day",
+      name: "trainDay",
+      component: () => import("../views/TrainDayView.vue"),
+    },
+    {
+      path: "/train-year",
+      name: "trainYear",
+      component: () => import("../views/TrainYearView.vue"),
     },
   ],
 });

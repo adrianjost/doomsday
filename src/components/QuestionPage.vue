@@ -65,7 +65,7 @@ header {
   margin: 0.5rem 0.5rem 1rem;
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .help-article {
@@ -73,7 +73,7 @@ h2 {
   max-height: calc(85vh - 6rem);
 }
 .question {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   padding: 0 0.5rem;
 }

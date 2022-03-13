@@ -26,7 +26,8 @@ watchEffect(() => {
     <nav class="border">
       <ul class="nav-items inline">
         <li><RouterLink to="/">Test</RouterLink></li>
-        <li><RouterLink to="/doomsday">Training</RouterLink></li>
+        <li><RouterLink to="/train-day">Train Day</RouterLink></li>
+        <li><RouterLink to="/train-year">Train Year</RouterLink></li>
       </ul>
     </nav>
     <RouterView />
@@ -51,7 +52,7 @@ nav {
 nav > ul.nav-items {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 0.5rem;
   margin-top: 0;
 }

@@ -1,7 +1,7 @@
 <template>
   <QuestionPage :answer="correctAnswer" @next="generateNewQuestion">
     <template #title>
-      Guess the Doomsday Weekday<br />
+      Guess the doomsday weekday<br />
       for a given year.
     </template>
     <template #question>
@@ -20,8 +20,8 @@ const yearToGuess = ref<number>(2000);
 const correctAnswer = computed(() => {
   const date = new Date();
   date.setFullYear(yearToGuess.value);
+  date.setMonth(3); // months start at 0!
   date.setDate(4);
-  date.setMonth(3);
   return date.getDay();
 });
 
