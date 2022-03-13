@@ -9,7 +9,7 @@
       <span class="dynamic-question-content"
         >{{ dateToGuess.getFullYear() }}-{{
           (dateToGuess.getMonth() + 1).toString().padStart(2, "0")
-        }}-{{ dateToGuess.getDay().toString().padStart(2, "0") }}</span
+        }}-{{ dateToGuess.getDate().toString().padStart(2, "0") }}</span
       >?
     </template>
   </QuestionPage>
