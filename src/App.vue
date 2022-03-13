@@ -24,7 +24,7 @@ watchEffect(() => {
 <template>
   <main>
     <nav class="border">
-      <ul class="nav-items inline">
+      <ul class="nav-items inline text-center">
         <li><RouterLink to="/">Test</RouterLink></li>
         <li><RouterLink to="/train-day">Train Day</RouterLink></li>
         <li><RouterLink to="/train-year">Train Year</RouterLink></li>
@@ -45,9 +45,10 @@ main {
   grid-template-rows: 4rem auto;
 }
 nav {
-  margin: 0.5rem;
-  width: auto;
+  margin: 0.5rem auto;
+  width: 100%;
   z-index: inherit;
+  max-width: 600px;
 }
 nav > ul.nav-items {
   width: 100%;
