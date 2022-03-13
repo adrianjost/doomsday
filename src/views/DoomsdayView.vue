@@ -1,11 +1,11 @@
 <template>
   <QuestionPage :answer="correctAnswer" @next="generateNewQuestion">
     <template #title>
-      Guess the Doomsday<br />
+      Guess the Doomsday Weekday<br />
       for a given year.
     </template>
     <template #question>
-      What's the doomsday of <br />
+      What's the doomsday of the year
       <span class="dynamic-question-content">{{ yearToGuess }}</span
       >?
     </template>
