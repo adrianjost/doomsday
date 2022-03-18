@@ -3,18 +3,18 @@
     <label class="border-none" :for="randomID">
       <slot name="toggle"></slot>
     </label>
-  </div>
-  <Teleport to="body">
-    <input class="modal-state" :id="randomID" type="checkbox" />
-    <div class="modal">
-      <label class="modal-bg" :for="randomID"></label>
-      <div class="modal-body text-center">
-        <div class="modal-content">
-          <slot name="content" :id="randomID"></slot>
+    <Teleport to="body">
+      <input class="modal-state" :id="randomID" type="checkbox" />
+      <div class="modal">
+        <label class="modal-bg" :for="randomID"></label>
+        <div class="modal-body text-center">
+          <div class="modal-content">
+            <slot name="content" :id="randomID"></slot>
+          </div>
         </div>
       </div>
-    </div>
-  </Teleport>
+    </Teleport>
+  </div>
 </template>
 
 <script setup lang="ts">
