@@ -91,6 +91,7 @@ header {
   display: grid;
   grid-template-columns: 1fr auto;
   text-align: left;
+  grid-gap: 0.5rem;
 }
 h2 {
   font-size: 1.25rem;
