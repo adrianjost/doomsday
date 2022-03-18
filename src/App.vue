@@ -2,7 +2,6 @@
 import { RouterView, RouterLink } from "vue-router";
 
 import { watchEffect } from "vue";
-import { useRegisterSW } from "virtual:pwa-register/vue";
 import { useMediaQuery } from "@vueuse/core";
 
 const prefersDarkTheme = useMediaQuery("(prefers-color-scheme: dark)");
@@ -10,14 +9,6 @@ watchEffect(() => {
   document
     .querySelector("html")
     ?.classList.toggle("dark", prefersDarkTheme.value);
-});
-const { needRefresh, updateServiceWorker } = useRegisterSW();
-watchEffect(() => {
-  if (needRefresh.value) {
-    if (confirm("New version available - reload to update?")) {
-      updateServiceWorker();
-    }
-  }
 });
 </script>
 
