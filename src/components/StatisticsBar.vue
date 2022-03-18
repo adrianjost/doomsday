@@ -8,7 +8,7 @@
         class="stats-item border"
         :class="[colorForAttempts(stat)]"
       >
-        {{ stat || "∞" }}
+        {{ stat }}
       </div>
     </div>
   </article>
