@@ -1,5 +1,9 @@
 <template>
-  <QuestionPage :answer="correctAnswer" @next="generateNewQuestion">
+  <QuestionPage
+    identifier="train-year"
+    :answer="correctAnswer"
+    @next="generateNewQuestion"
+  >
     <template #title>
       Guess the doomsday weekday<br />
       for a given year.

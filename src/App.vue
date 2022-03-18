@@ -42,13 +42,14 @@ watchEffect(() => {
 main {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 4rem auto;
+  grid-template-rows: 3rem auto;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0.25rem;
 }
 nav {
-  margin: 0.5rem auto;
   width: 100%;
   z-index: inherit;
-  max-width: 600px;
 }
 nav > ul.nav-items {
   width: 100%;

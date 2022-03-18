@@ -1,5 +1,9 @@
 <template>
-  <QuestionPage :answer="correctAnswer" @next="generateNewQuestion">
+  <QuestionPage
+    identifier="train-day"
+    :answer="correctAnswer"
+    @next="generateNewQuestion"
+  >
     <template #title>
       Guess the weekday <br />based on a given doomsday.
     </template>

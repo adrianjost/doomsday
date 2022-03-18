@@ -1,5 +1,9 @@
 <template>
-  <QuestionPage :answer="correctAnswer" @next="generateNewQuestion">
+  <QuestionPage
+    :answer="correctAnswer"
+    @next="generateNewQuestion"
+    identifier="test"
+  >
     <template #title>
       Guess the weekday<br />
       for a given date.

@@ -7,15 +7,15 @@
   font-weight: normal;
 }
 
-body, #app {
+body,
+#app {
   min-height: 100vh;
   transition: color 0.5s, background-color 0.5s;
-  font-size: 15px;
+  font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: contain;
-  
 }
 html body {
   background-color: var(--main-background);

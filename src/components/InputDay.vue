@@ -26,10 +26,10 @@ const skip = () => {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 0.25rem;
-  padding: 0.25rem;
+  padding: 0;
 }
 .answer-options > button {
-  height: 5rem;
+  height: 4rem;
   font-weight: 500;
   font-size: 1.5rem;
   margin: 0;
