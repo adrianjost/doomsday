@@ -22,12 +22,4 @@ const router = createRouter({
   ],
 });
 
-import { useRegisterSW } from "virtual:pwa-register/vue";
-const { needRefresh, updateServiceWorker } = useRegisterSW();
-router.afterEach(async () => {
-  if (needRefresh.value) {
-    await updateServiceWorker(false);
-  }
-});
-
 export default router;
