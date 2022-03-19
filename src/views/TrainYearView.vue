@@ -17,6 +17,7 @@
 </template>
 
 <script setup lang="ts">
+import { randomDate } from "@/utils";
 import { computed, ref } from "vue";
 import QuestionPage from "../components/QuestionPage.vue";
 
@@ -29,10 +30,7 @@ const correctAnswer = computed(() => {
   return date.getDay();
 });
 
-const minYear = 1700;
-const maxYear = 2100;
 const generateNewQuestion = () => {
-  yearToGuess.value =
-    Math.floor(Math.random() * (maxYear - minYear + 1)) + minYear;
+  yearToGuess.value = randomDate().getFullYear();
 };
 </script>

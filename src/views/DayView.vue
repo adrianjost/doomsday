@@ -20,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+import { randomDate } from "@/utils";
 import { computed, ref } from "vue";
 import QuestionPage from "../components/QuestionPage.vue";
 
@@ -29,13 +30,6 @@ const correctAnswer = computed(() => {
 });
 
 const generateNewQuestion = () => {
-  // generate Date object for random date between 1800 and 2200
-  const minYear = 1800;
-  const maxYear = 2200;
-  const randomYear =
-    Math.floor(Math.random() * (maxYear - minYear + 1)) + minYear;
-  const randomMonth = Math.floor(Math.random() * 12) + 1;
-  const randomDay = Math.floor(Math.random() * 30) + 1;
-  dateToGuess.value = new Date(randomYear, randomMonth, randomDay);
+  dateToGuess.value = randomDate();
 };
 </script>
