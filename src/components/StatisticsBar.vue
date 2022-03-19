@@ -6,7 +6,7 @@
         v-for="(stat, index) of statistics"
         :key="index"
         class="stats-item border"
-        :class="[colorForAttempts(stat)]"
+        :class="[colorForAttempts(stat), `border-${(index % 5) + 2}`]"
       >
         {{ stat }}
       </div>
