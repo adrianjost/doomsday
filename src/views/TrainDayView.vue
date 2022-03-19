@@ -11,11 +11,12 @@
       What's the weekday of <br />
       <span class="dynamic-question-content">
         {{ humandReadableMonth }}.
-        {{ dateToGuess.getDate().toString().padStart(2, "0") }}</span
-      >? <br />
+        {{ dateToGuess.getDate().toString().padStart(2, "0") }} </span
+      >? <template v-if="leapYear">(leap year)</template
+      ><template v-else>(no leap year)</template><br />
       Doomsday is a
-      <span class="dynamic-question-content">{{ doomsdayHumanReadable }}</span>
-      ({{ doomsday }}).
+      <span class="dynamic-question-content">{{ doomsdayHumanReadable }}</span
+      >.
     </template>
   </QuestionPage>
 </template>
@@ -29,6 +30,10 @@ const correctAnswer = computed(() => {
   return dateToGuess.value.getDay();
 });
 
+const leapYear = computed(() => {
+  const year = dateToGuess.value.getFullYear();
+  return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+});
 const doomsday = computed<number>(() => {
   const date = new Date();
   date.setFullYear(dateToGuess.value.getFullYear());
