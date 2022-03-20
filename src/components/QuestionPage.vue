@@ -11,7 +11,7 @@
         <template #content="{ id }">
           <h3 class="modal-title">Help meee...!!!</h3>
           <HelpArticle class="help-article" />
-          <label class="paper-btn model-close" :for="id">Got it!</label>
+          <label class="paper-btn modal-close" :for="id">Got it!</label>
         </template>
       </PaperModal>
     </header>
