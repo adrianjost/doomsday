@@ -23,6 +23,7 @@ export default defineConfig({
         start_url: "/",
         display: "standalone",
         orientation: "portrait",
+        theme_color: "#229cef",
         background_color: "#443",
         description:
           "A webapp to learn the doomsday method of calculating the day of week for every date",
@@ -31,11 +32,25 @@ export default defineConfig({
             src: "/pwa-192x192.png",
             sizes: "192x192",
             type: "image/png",
+            purpose: "any",
+          },
+          {
+            src: "/mask-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "maskable",
           },
           {
             src: "/pwa-512x512.png",
             sizes: "512x512",
             type: "image/png",
+            purpose: "any",
+          },
+          {
+            src: "/mask-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable",
           },
         ],
         related_applications: [
