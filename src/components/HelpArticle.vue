@@ -275,6 +275,10 @@ table th {
   padding: 0 0.25rem;
 }
 
+strong {
+  font-weight: bolder;
+}
+
 .collapsible-body a {
   margin: 0;
 }

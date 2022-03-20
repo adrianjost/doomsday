@@ -1,12 +1,12 @@
 <template>
   <article v-if="statistics.length > 0">
     <h3 class="headline">Your last attempts:</h3>
-    <div class="stats-bar border border-primary">
+    <div class="stats-bar border child-borders border-primary">
       <div
         v-for="(stat, index) of statistics"
         :key="index"
         class="stats-item border"
-        :class="[colorForAttempts(stat), `border-${(index % 5) + 2}`]"
+        :class="[colorForAttempts(stat)]"
       >
         {{ stat }}
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="row flex-spaces margin-none">
+  <div>
     <label class="border-none" :for="randomID">
       <slot name="toggle"></slot>
     </label>

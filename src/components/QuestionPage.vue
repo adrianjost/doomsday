@@ -1,19 +1,17 @@
 <template>
   <div class="question-page">
     <header>
-      <h2 class="margin-none">
+      <h2 class="title">
         <slot name="title" />
       </h2>
       <PaperModal close="Got it!">
         <template #toggle>
-          <span class="paper-btn margin-none">Help</span>
+          <span class="paper-btn modal-trigger">Help</span>
         </template>
         <template #content="{ id }">
-          <h2 class="margin-bottom-small">Help meee...!!!</h2>
+          <h3 class="modal-title">Help meee...!!!</h3>
           <HelpArticle class="help-article" />
-          <label class="paper-btn margin-top margin-bottom-none" :for="id"
-            >Got it!</label
-          >
+          <label class="paper-btn model-close" :for="id">Got it!</label>
         </template>
       </PaperModal>
     </header>
@@ -133,14 +131,26 @@ header {
   text-align: left;
   grid-gap: 0.5rem;
 }
-h2 {
+header .title {
   font-size: 1.25rem;
+  margin: 0;
 }
 
 .stats {
   margin: 0.5rem 0 2rem;
 }
 
+.modal-trigger {
+  margin: 0;
+}
+.modal-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.modal-close {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0 !important;
+}
 .help-article {
   overflow-y: auto;
   max-height: calc(85vh - 6rem);
