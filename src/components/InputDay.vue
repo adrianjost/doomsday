@@ -1,5 +1,5 @@
 <template>
-  <div class="answer-options">
+  <div class="answer-options child-borders">
     <button type="button" @click="submit(0)">0 - Sun</button>
     <button type="button" @click="submit(1)">1 - Mon</button>
     <button type="button" @click="submit(2)">2 - Tue</button>
