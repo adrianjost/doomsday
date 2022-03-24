@@ -48,7 +48,10 @@ const statistics = useLocalStorage<(number | "∞")[]>(
   []
 );
 
-const attemptsForCurrentQuestion = ref(0);
+const attemptsForCurrentQuestion = useLocalStorage<number>(
+  `statistics-attempts-${props.identifier}`,
+  0
+);
 
 const numberOfStatItems = 8;
 const pushStatistics = (attempts: number | "∞") => {
@@ -60,6 +63,12 @@ const pushStatistics = (attempts: number | "∞") => {
 };
 
 const submit = (answer: number) => {
+  if (
+    attemptsForCurrentQuestion.value === undefined ||
+    attemptsForCurrentQuestion.value === null
+  ) {
+    attemptsForCurrentQuestion.value = 0;
+  }
   attemptsForCurrentQuestion.value++;
   if (answer === props.answer) {
     if (prefersReducedMotion.value) {
