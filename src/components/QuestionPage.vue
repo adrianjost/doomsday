@@ -21,7 +21,11 @@
       <p class="question">
         <slot name="question" />
       </p>
-      <InputDay @submit="submit" @skip="skip" />
+      <InputDay
+        :invalidOptions="invalidOptions"
+        @submit="submit"
+        @skip="skip"
+      />
     </form>
   </div>
 </template>
@@ -62,6 +66,17 @@ const pushStatistics = (attempts: number | "∞") => {
   attemptsForCurrentQuestion.value = 0;
 };
 
+const invalidOptions = useLocalStorage<number[]>(
+  `statistics-invalid-options-${props.identifier}`,
+  []
+);
+
+const newQuestion = (): void => {
+  emit("next");
+  attemptsForCurrentQuestion.value = 0;
+  invalidOptions.value = [];
+};
+
 const submit = (answer: number) => {
   if (
     attemptsForCurrentQuestion.value === undefined ||
@@ -76,15 +91,19 @@ const submit = (answer: number) => {
     } else {
       confettiExplosion();
     }
-    emit("next");
     pushStatistics(attemptsForCurrentQuestion.value);
+    newQuestion();
   } else {
-    alert("👀 Guess again! 😉");
+    if (prefersReducedMotion.value) {
+      alert("👀 Guess again! 😉");
+    } else {
+      invalidOptions.value.push(answer);
+    }
   }
 };
 const skip = () => {
-  emit("next");
   pushStatistics(attemptsForCurrentQuestion.value === 0 ? 0 : "∞");
+  newQuestion();
 };
 
 const confettiExplosion = () => {
