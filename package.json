@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
+    "@types/canvas-confetti": "^1.4.2",
     "@types/jsdom": "^16.2.14",
     "@types/node": "^16.11.25",
     "@vitejs/plugin-vue": "^2.2.2",
