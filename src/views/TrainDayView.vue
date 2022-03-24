@@ -23,10 +23,21 @@
 
 <script setup lang="ts">
 import { randomDate } from "@/utils";
-import { computed, ref } from "vue";
+import { useLocalStorage } from "@vueuse/core";
+import { computed } from "vue";
 import QuestionPage from "../components/QuestionPage.vue";
 
-const dateToGuess = ref<Date>(new Date());
+const dateToGuessStorage = useLocalStorage<number>(
+  "question-train-day-view",
+  Date.now()
+);
+const dateToGuess = computed<Date>({
+  get: () => new Date(dateToGuessStorage.value),
+  set: (value) => {
+    dateToGuessStorage.value = value.getTime();
+  },
+});
+
 const correctAnswer = computed(() => {
   return dateToGuess.value.getDay();
 });

@@ -18,10 +18,12 @@
 
 <script setup lang="ts">
 import { randomDate } from "@/utils";
-import { computed, ref } from "vue";
+import { useLocalStorage } from "@vueuse/core";
+import { computed } from "vue";
 import QuestionPage from "../components/QuestionPage.vue";
 
-const yearToGuess = ref<number>(2000);
+const yearToGuess = useLocalStorage<number>("question-year-view", 2000);
+
 const correctAnswer = computed(() => {
   const date = new Date();
   date.setFullYear(yearToGuess.value);

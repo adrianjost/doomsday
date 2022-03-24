@@ -31,7 +31,7 @@ import InputDay from "./InputDay.vue";
 import HelpArticle from "./HelpArticle.vue";
 import PaperModal from "./PaperModal.vue";
 import { useLocalStorage, useMediaQuery } from "@vueuse/core";
-import { onBeforeMount, ref } from "vue";
+import { ref } from "vue";
 import StatisticsBar from "./StatisticsBar.vue";
 import confetti from "canvas-confetti";
 
@@ -49,10 +49,6 @@ const statistics = useLocalStorage<(number | "∞")[]>(
 );
 
 const attemptsForCurrentQuestion = ref(0);
-
-onBeforeMount(() => {
-  emit("next"); // generate a new question
-});
 
 const numberOfStatItems = 8;
 const pushStatistics = (attempts: number | "∞") => {
