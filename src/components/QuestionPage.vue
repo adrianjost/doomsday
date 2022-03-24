@@ -30,10 +30,12 @@
 import InputDay from "./InputDay.vue";
 import HelpArticle from "./HelpArticle.vue";
 import PaperModal from "./PaperModal.vue";
-import { useLocalStorage } from "@vueuse/core";
+import { useLocalStorage, useMediaQuery } from "@vueuse/core";
 import { onBeforeMount, ref } from "vue";
 import StatisticsBar from "./StatisticsBar.vue";
 import confetti from "canvas-confetti";
+
+const prefersReducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
 
 const props = defineProps({
   answer: { type: Number, required: true },
@@ -64,8 +66,11 @@ const pushStatistics = (attempts: number | "∞") => {
 const submit = (answer: number) => {
   attemptsForCurrentQuestion.value++;
   if (answer === props.answer) {
-    // alert("✅ Correct! 🎉");
-    confettiExplosion();
+    if (prefersReducedMotion.value) {
+      alert("✅ Correct! 🎉");
+    } else {
+      confettiExplosion();
+    }
     emit("next");
     pushStatistics(attemptsForCurrentQuestion.value);
   } else {
