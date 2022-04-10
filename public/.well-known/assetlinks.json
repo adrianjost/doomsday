@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "dev.adrianjost.doomsday.twa",
+      "sha256_cert_fingerprints": [
+        "C7:58:8D:D4:3B:D4:D4:11:49:39:AB:0F:60:D2:81:A5:04:47:1B:22:DB:D4:A2:A4:A1:EC:61:4A:0A:AC:21:71"
+      ]
+    }
+  }
+]
