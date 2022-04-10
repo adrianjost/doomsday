@@ -26,7 +26,7 @@ export default defineConfig({
         theme_color: "#229cef",
         background_color: "#443",
         description:
-          "A webapp to learn the doomsday method of calculating the day of week for every date",
+          "An app to learn the doomsday method of calculating the day of week for every date. It includes multiple training views to learn the skill step by step. There's also a comprehensive help page that will assist you if you are stuck somewhere.",
         icons: [
           {
             src: "/pwa-192x192.png",
@@ -57,6 +57,47 @@ export default defineConfig({
           {
             platform: "Web",
             url: "https://doomsday.adrianjost.dev/",
+          },
+        ],
+        screenshots: [
+          {
+            src: "/train-year.png",
+            sizes: "1280x720",
+            type: "image/png",
+            platform: "narrow",
+            label:
+              "Here you can learn to calculate the weekday of the doomsday of any year.",
+          },
+          {
+            src: "/train-day.png",
+            sizes: "1280x720",
+            type: "image/png",
+            platform: "narrow",
+            label:
+              "On this view you can train to calculate a day of week based on a given doomsday.",
+          },
+          {
+            src: "/help.png",
+            sizes: "1280x720",
+            type: "image/png",
+            platform: "narrow",
+            label: "If you are stuck, there is always a little help available.",
+          },
+          {
+            src: "/test-yourself.png",
+            sizes: "1280x720",
+            type: "image/png",
+            platform: "narrow",
+            label:
+              "Finally you can pull all your knowledge together and test your combined skills. Guess the Weekday of a given day.",
+          },
+          {
+            src: "/confetti.png",
+            sizes: "1280x720",
+            type: "image/png",
+            platform: "narrow",
+            label:
+              "Of course there is confetti to spark some joy when you did it right. 🥳",
           },
         ],
       },

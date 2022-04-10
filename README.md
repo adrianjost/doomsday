@@ -12,20 +12,20 @@ The webapp features 3 training modes.
 
 First of all, you can learn to calculate the weekday of the doomsday of any year.
 
-<img width="250px" src="./documentation/media/train-year.png" alt="Train year view" />
+<img width="250px" src="./public/train-year.png" alt="Train year view" />
 
 When you got that, you can train to calculate a day of week based on a given doomsday.
 
-<img width="250px" src="./documentation/media/train-day.png" alt="Train month view" />
+<img width="250px" src="./public/train-day.png" alt="Train month view" />
 
 If you are stuck, there is always a little help available.
 
-<img width="250px" src="./documentation/media/help.png" alt="Help view" />
+<img width="250px" src="./public/help.png" alt="Help view" />
 
 Finally you can pull all your knowledge together and test your combined skills:
 
-<img width="250px" src="./documentation/media/test-yourself.png" alt="Test your skills by calculating the weekday of a given day" />
+<img width="250px" src="./public/test-yourself.png" alt="Test your skills by calculating the weekday of a given day" />
 
 And of course there is confetti to spark some joy when you did it. 🥳
 
-<img width="250px" src="./documentation/media/confetti.png" alt="confetti on top of question" />
+<img width="250px" src="./public/confetti.png" alt="confetti on top of question" />
