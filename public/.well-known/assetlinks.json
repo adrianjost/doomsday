@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "dev.adrianjost.doomsday.twa",
       "sha256_cert_fingerprints": [
-        "C7:58:8D:D4:3B:D4:D4:11:49:39:AB:0F:60:D2:81:A5:04:47:1B:22:DB:D4:A2:A4:A1:EC:61:4A:0A:AC:21:71"
+        "C7:58:8D:D4:3B:D4:D4:11:49:39:AB:0F:60:D2:81:A5:04:47:1B:22:DB:D4:A2:A4:A1:EC:61:4A:0A:AC:21:71",
+        "6A:2A:E7:34:49:EC:61:2C:62:12:EE:10:F4:DF:71:90:B5:9E:39:30:3F:38:CC:DB:7D:F3:88:BD:FD:74:E0:6A"
       ]
     }
   }
